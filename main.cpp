@@ -23,6 +23,7 @@ int main() {
   if (hscore && gattendance) cout << "PASS - Meets all requirements";
   else if (hscore) cout << "WARNING - low attendance";
   else if (gattendance) cout << "WARNING - low score";
+  else if (score < 0 || score > 100 && attendance < 0 || attendance > 100) cout << "INVALID - Score and Attendance not valid values";
   else if (score < 0 || score > 100) cout << "INVALID - Score not a valid value";
   else if (attendance < 0 || attendance > 100) cout << "INVALID - Attendance not a valid value";
   else cout << "FAIL - Does not meet requirements";
