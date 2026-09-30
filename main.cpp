@@ -17,13 +17,15 @@ int main() {
   cin >> attendance;
 
   bool hscore = 70 < score && score <= 100;
-  bool gattendance = 70 < attendance && <= 100;
+  bool gattendance = 70 < attendance && attendance <= 100;
 
 
   if (hscore && gattendance) cout << "uhhh test";
   else if (hscore) cout << "WARNING - low attendance";
   else if (gattendance) cout << "WARNING - low score";
   else cout << "yeah you didn't pass buster"; 
+  
+  
   // TODO: cout question, then cin, for score and for attendance
 
   // Edge values: (list just-below / exactly-on / just-above for each threshold here)
