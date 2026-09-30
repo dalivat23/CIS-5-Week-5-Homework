@@ -20,10 +20,12 @@ int main() {
   bool gattendance = 70 < attendance && attendance <= 100;
 
 
-  if (hscore && gattendance) cout << "uhhh test";
+  if (hscore && gattendance) cout << "PASS - Meets all requirements";
   else if (hscore) cout << "WARNING - low attendance";
   else if (gattendance) cout << "WARNING - low score";
-  else cout << "yeah you didn't pass buster"; 
+  else if (score < 0 || score > 100) cout << "INVALID - Score not a valid value";
+  else if (attendance < 0 || attendance > 100) cout << "INVALID - Attendance not a valid value";
+  else cout << "FAIL - Does not meet requirements";
   
   
   // TODO: cout question, then cin, for score and for attendance
