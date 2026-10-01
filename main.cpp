@@ -27,7 +27,7 @@ int main() {
   
   // Invalid Chain first in order to check for out of range values so those invalid values are not processed in the other branches 
   // score < 0 || score > 100 (Just Below Chain Value : -1 | Exactly On Chain Value : 0 & 100 | Just Above Chain Value : 101)
-  if (score < 0 || score > 100 && attendance < 0 || attendance > 100)
+  if ((score < 0 || score > 100) && (attendance < 0 || attendance > 100))
 	  cout << "INVALID - Score and Attendance not valid values";
   else if (score < 0 || score > 100)
   {
