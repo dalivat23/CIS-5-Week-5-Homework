@@ -16,12 +16,17 @@ int main() {
   cout << "Attendance percentage? ";
   cin >> attendance;
 
-  // Just Below Chain Value : 70 | Exactly On Chain Value : 70 | Just Above Chain Value : 71
+  // score > 70 (Just Below Chain Value : 70 | Exactly On Chain Value : 70 | Just Above Chain Value : 71)
+  // score <= 100 (Just Below Chain Value : 99 | Exactly On Chain Value : 100 | Just Above Chain Value : 101)
   bool hscore = 70 < score && score <= 100;
  
+  // attendance > 70 (Just Below Chain Value : 70 | Exactly On Chain Value : 70 | Just Above Chain Value : 71)
+  // attendance <= 100 (Just Below Chain Value : 99 | Exactly On Chain Value : 100 | Just Above Chain Value : 101)
   bool gattendance = 70 < attendance && attendance <= 100;
 
-
+  
+  // Invalid Chain first in order to check for out of range values so those invalid values are not processed in the other branches 
+  // score < 0 || score > 100 (Just Below Chain Value : -1 | Exactly On Chain Value : 0 & 100 | Just Above Chain Value : 101)
   if (score < 0 || score > 100 && attendance < 0 || attendance > 100)
 	  cout << "INVALID - Score and Attendance not valid values";
   else if (score < 0 || score > 100)
@@ -32,6 +37,10 @@ int main() {
   {
 	  cout << "INVALID - Attendance not a valid value";
   }
+  
+  
+  
+  // Use of && instead of || to check for both conditions being met for the best outcome and instead of just one being met for the best outcome
   else if (hscore && gattendance)
   {
 	  cout << "PASS - Meets all requirements";
@@ -44,19 +53,6 @@ int main() {
   {
 	  cout << "FAIL - Does not meet requirements";
   }
-  
-  // TODO: cout question, then cin, for score and for attendance
-
-  // Edge values: (list just-below / exactly-on / just-above for each threshold here)
-
-  // TODO: invalid branch FIRST — out-of-range input gets its own message
-  //   if (score < 0 || score > 100) { ... }
-
-  // TODO: else if ( ... && ... ) { ... }   best outcome
-  // TODO: else if ( ... ) { ... }          middle outcome
-  // TODO: else { ... }                     the rest
-
-  // TODO: two comments that explain a choice (why invalid first, why && not ||, why >= not >)
 
   return 0;
 }
