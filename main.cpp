@@ -16,7 +16,7 @@ int main() {
   cout << "Attendance percentage? ";
   cin >> attendance;
 
-  \\ Just Below Chain Value : 70 | Exactly On Chain Value : 70 | Just Above Chain Value : 71
+  // Just Below Chain Value : 70 | Exactly On Chain Value : 70 | Just Above Chain Value : 71
   bool hscore = 70 < score && score <= 100;
  
   bool gattendance = 70 < attendance && attendance <= 100;
