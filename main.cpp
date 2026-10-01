@@ -22,23 +22,23 @@ int main() {
   bool gattendance = 70 < attendance && attendance <= 100;
 
 
-  if (score < 0 || score > 100 && attendance < 0 || attendance > 100) 
+  if (score < 0 || score > 100 && attendance < 0 || attendance > 100)
 	  cout << "INVALID - Score and Attendance not valid values";
   else if (score < 0 || score > 100)
   {
 	  cout << "INVALID - Score not a valid value";
   }
-  else if (attendance < 0 || attendance > 100) 
+  else if (attendance < 0 || attendance > 100)
   {
 	  cout << "INVALID - Attendance not a valid value";
   }
-  else if (hscore && gattendance) 
-  {	
-	  cout << "PASS - Meets all requirements";
-  }	
-  else if (hscore || gattendance)
+  else if (hscore && gattendance)
   {
-	  cout << "WARNING - low attendance OR low score";
+	  cout << "PASS - Meets all requirements";
+  }
+  else if (hscore || !gattendance)
+  {
+	  cout << "WARNING - low attendance";
   }
   else
   {
