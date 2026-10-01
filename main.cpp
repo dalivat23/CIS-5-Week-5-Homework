@@ -36,13 +36,9 @@ int main() {
   {	
 	  cout << "PASS - Meets all requirements";
   }	
-  else if (hscore)
+  else if (hscore || gattendance)
   {
-	  cout << "WARNING - low attendance";
-  }
-  else if (gattendance)
-  {
-	  cout << "WARNING - low score";
+	  cout << "WARNING - low attendance OR low score";
   }
   else
   {
